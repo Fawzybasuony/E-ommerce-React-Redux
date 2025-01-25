@@ -1,13 +1,11 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
-import Header from "../header";
-import Footer from "../Footer";
+ 
 import "./contact.css";
 
 export default function Contact() {
   return (
     <>
-      <Header />
 
       <div>
         <section className="page-add">
@@ -96,7 +94,6 @@ export default function Contact() {
         </div>
       </div>
 
-      <Footer />
     </>
   );
 }

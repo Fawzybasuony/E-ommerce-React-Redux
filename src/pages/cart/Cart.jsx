@@ -19,8 +19,7 @@ import {
   incrementByAmount,
   deecreasQuontity,
 } from "../../Radox/mydataSlice.js";
-import Header from "../../comp/header.js";
-import Footer from "../../comp/Footer.js";
+ 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -38,9 +37,13 @@ const Cart = () => {
   return (
     <>
       <div className="car">
-        <Header />
         <img
-          style={{ width: "90%", height: "150px", margin: "20px",borderRadius:"10px" }}
+          style={{
+            width: "90%",
+            height: "150px",
+            margin: "20px",
+            borderRadius: "10px",
+          }}
           src="/logos/logo_cart2.jpg"
           alt="'"
         />
@@ -48,12 +51,11 @@ const Cart = () => {
           Cart <span>.</span>
         </h2>
 
-     <div className="d-flex gap-2 ms-3">
-         <p>Home/ </p>
-         <p>Dresses/ </p>
-         <p>Night/ Dresses</p>
-      
-     </div>
+        <div className="d-flex gap-2 ms-3">
+          <p>Home/ </p>
+          <p>Dresses/ </p>
+          <p>Night/ Dresses</p>
+        </div>
         {selectedProducts.length < 1 ? (
           <div
             className="alert alert-danger ms-auto me-auto w-50 mt-5 text-center fs-4"
@@ -153,7 +155,6 @@ const Cart = () => {
             </Paper>
           </Box>
         )}
-        <Footer />
       </div>
     </>
   );

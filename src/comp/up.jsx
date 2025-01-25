@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function up() {
+export default function ButtomUp() {
 
     const up = () => { 
         window.scroll({

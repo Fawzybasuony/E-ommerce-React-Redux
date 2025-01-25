@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "./header";
-import Footer from "./Footer";
+ 
+ 
 
 export default function Abute() {
   return (
     <>
-      <Header />
       <div className="about-section mb-4" style={{ marginTop: "100px" }}>
         <div className="text-center mt-5">
           <h2>
@@ -92,7 +91,6 @@ export default function Abute() {
         </section>
       </div>
 
-      <Footer />
     </>
   );
 }

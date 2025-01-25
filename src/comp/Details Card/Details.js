@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../comp/header";
+import Header from "../Header/header";
 
-export default function Detlse() {
+export default function Details() {
   const { ID } = useParams();
   const [products, setproducts] = useState();
   useEffect(() => {

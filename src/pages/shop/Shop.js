@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Header from "../header";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
 import { Add } from "../../Radox/mydataSlice";
 import Aos from "aos";
-import Footer from "../Footer";
 import "./shoop.css";
 
 export default function Shop() {
@@ -48,8 +46,7 @@ export default function Shop() {
 
   return (
     <>
-      <Header />
-      <img className="oferimg" src="/logos/add.jpg" alt="'" />
+      <img className="oferimg" src="/logos/add.jpg" alt="oferimg.." />
       <h2 style={{ marginLeft: "20px", fontSize: "60px" }}>
         Product <span>.</span>
       </h2>
@@ -92,28 +89,6 @@ export default function Shop() {
                     {item.description.slice(0, 20)}...
                   </p>
 
-                  {/* <div data-aos="fade-down-left" className="py-2">
-                    <i
-                      class="text-warning fa-regular fa-star star-icon"
-                      data-star="1"
-                    ></i>
-                    <i
-                      class="text-warning fa-regular fa-star star-icon"
-                      data-star="2"
-                    ></i>
-                    <i
-                      class="text-warning fa-regular fa-star star-icon"
-                      data-star="3"
-                    ></i>
-                    <i
-                      class="text-warning fa-regular fa-star star-icon"
-                      data-star="4"
-                    ></i>
-                    <i
-                      class="text-warning fa-regular fa-star star-icon"
-                      data-star="5"
-                    ></i>
-                  </div> */}
 
                   <div className=" ">
                     <div className="star-group">
@@ -212,8 +187,6 @@ export default function Shop() {
           ))}
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

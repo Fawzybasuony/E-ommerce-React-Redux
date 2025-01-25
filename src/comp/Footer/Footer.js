@@ -195,7 +195,7 @@ export default function Footer() {
             >
               <span className="hidden-link-text ">Github</span>
               <svg
-                className="footer-social-icon-svg "
+                className="footer-social-icon-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
               >
