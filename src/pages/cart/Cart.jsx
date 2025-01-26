@@ -38,7 +38,7 @@ const Cart = () => {
   return (
     <>
     
-      <Infoproduct title={" Card  "}/>
+      <Infoproduct title={" Card . "}/>
     
 
        <div>   

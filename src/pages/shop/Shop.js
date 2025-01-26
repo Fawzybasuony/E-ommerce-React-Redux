@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Add } from "../../Radox/mydataSlice";
 import Aos from "aos";
 import "./shoop.css";
-import Info_product from "../../helpers/Infoproduct";
 import Infoproduct from "../../helpers/Infoproduct";
 
 export default function Shop() {
