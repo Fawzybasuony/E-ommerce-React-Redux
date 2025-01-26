@@ -17,12 +17,7 @@ export default function Contact() {
               Contact us<span>.</span>
               
                   </h2>
-                  <div className="d-flex gap-2 ms-3">
-         <p>Home/ </p>
-         <p>Dresses/ </p>
-         <p>Night/ Dresses</p>
-      
-     </div>
+          
                 </div>
               </div>
                

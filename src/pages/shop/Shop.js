@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Add } from "../../Radox/mydataSlice";
 import Aos from "aos";
 import "./shoop.css";
+import Info_product from "../../helpers/Info_product";
+import Infoproduct from "../../helpers/Info_product";
 
 export default function Shop() {
   const navigate = useNavigate();
@@ -46,15 +48,11 @@ export default function Shop() {
 
   return (
     <>
-      <img className="oferimg" src="/logos/add.jpg" alt="oferimg.." />
-      <h2 style={{ marginLeft: "20px", fontSize: "60px" }}>
-        Product <span>.</span>
-      </h2>
-      <div className="d-flex justify-content-start gap-2 ms-3">
-        <p>Home/ </p>
-        <p>Dresses/ </p>
-        <p>Night/ Dresses</p>
-      </div>
+  
+      {/*  */}
+  <Infoproduct title={" Product  "}/>
+
+
       <div className="container">
         <div className="row mx-0 justify-content-center">
           {product.map((item) => (
@@ -65,27 +63,27 @@ export default function Shop() {
               <div className="card" data-aos="zoom-in-up">
                 <div className="containerr text-center">
                   <img
+                      onClick={() => navigate(`/Details/${item.id}`)}
                     src={item.image}
                     className="card-img-top"
                     alt="Product"
                   />
-                  <div
-                    onClick={() => navigate(`/Detlse/${item.id}`)}
+                  {/* <div
                     className="overlay"
                   >
                     <div className="text fw-bold">
                       <i className="fs-3 text-primary fa-regular fa-eye"></i>
                       <br />
-                      {/*  */}
+                     
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="card-body">
-                  <h5 className="card-title desc">
+                  <h5 className="  desc">
                     {item.title.slice(0, 15)}...
                   </h5>
-                  <p className="card-text text-secondary fs-6 fw-bold  pb-2 ">
+                  <p className="card-text  fs-6 pb-2 ">
                     {item.description.slice(0, 20)}...
                   </p>
 

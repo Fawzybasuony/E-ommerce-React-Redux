@@ -19,6 +19,7 @@ import {
   incrementByAmount,
   deecreasQuontity,
 } from "../../Radox/mydataSlice.js";
+import Infoproduct from "../../helpers/Info_product.jsx";
  
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -36,26 +37,11 @@ const Cart = () => {
 
   return (
     <>
-      <div className="car">
-        <img
-          style={{
-            width: "90%",
-            height: "150px",
-            margin: "20px",
-            borderRadius: "10px",
-          }}
-          src="/logos/logo_cart2.jpg"
-          alt="'"
-        />
-        <h2>
-          Cart <span>.</span>
-        </h2>
+    
+      <Infoproduct title={" Card  "}/>
+    
 
-        <div className="d-flex gap-2 ms-3">
-          <p>Home/ </p>
-          <p>Dresses/ </p>
-          <p>Night/ Dresses</p>
-        </div>
+       <div>   
         {selectedProducts.length < 1 ? (
           <div
             className="alert alert-danger ms-auto me-auto w-50 mt-5 text-center fs-4"

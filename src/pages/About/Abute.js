@@ -40,9 +40,9 @@ export default function Abute() {
                   ever-evolving needs of our customers.
                 </p>
 
-                <form>
+                <form className="border border-info rounded-2 p-3">
                   <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className=" text-secondary form-label">
+                    <label htmlFor="exampleInputEmail1" className="fw-bolder text-secondary form-label">
                       Email address
                     </label>
                     <input
@@ -58,7 +58,7 @@ export default function Abute() {
                   <div className="mb-3">
                     <label
                       htmlFor="exampleInputPassword1"
-                      className="form-label text-secondary"
+                      className=" fw-bolder form-label text-secondary"
                     >
                       Password
                     </label>

@@ -1,0 +1,77 @@
+/* =======================
+   Variables & General Style
+==========================*/
+
+:root {
+    --bodyBG: #f6f6f6;
+    --bodyFont: #2b3445;
+    --blue-button: #1976d2;
+    --red-button: #e41d43;
+    --white: #fff;
+    --footer-bg: #212529;
+  }
+  
+ 
+  
+ 
+  
+  main {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 1px -1px,
+      rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
+      rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 10%;
+
+  }
+  
+  main img {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 0.4rem;
+    margin-inline: auto;
+  }
+  
+  .product-details {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .product-details h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .product-details .description {
+    margin: 1rem 0;
+    line-height: 1.5;
+    color: gray;
+  }
+  
+  .product-details .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--red-button);
+  }
+  
+  /* Responsive for Small Screens */
+  @media (max-width: 800px) {
+    main img {
+      width: 100%;
+      max-width: 260px;
+    }
+  
+    .product-details {
+      margin-top: 1rem;
+    }
+  }
+  
