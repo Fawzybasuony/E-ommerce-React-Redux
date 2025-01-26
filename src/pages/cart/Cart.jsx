@@ -19,7 +19,7 @@ import {
   incrementByAmount,
   deecreasQuontity,
 } from "../../Radox/mydataSlice.js";
-import Infoproduct from "../../helpers/Info_product.jsx";
+import Infoproduct from "../../helpers/Infoproduct.jsx";
  
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
