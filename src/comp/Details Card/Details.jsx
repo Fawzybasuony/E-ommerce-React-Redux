@@ -37,6 +37,4 @@ export default function Details() {
   
   );
 }
-// Swal.fire({
-//   title: "are you sure ?",
-//   showCancelButton: true,
+ 

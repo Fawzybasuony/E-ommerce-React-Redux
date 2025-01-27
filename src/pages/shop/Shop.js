@@ -10,7 +10,7 @@ import data from "../../data.json";
 export default function Shop() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [setproduct] = useState([]);
+  const [product,setproduct] = useState([]);
   const [hart, sethart] = useState([]);
 
   const { selectedProductsID } = useSelector((state) => state.counter);
@@ -23,7 +23,7 @@ export default function Shop() {
       
         
       });
-  }, []);
+  }, [setproduct]);
   // Alert
   const changevalue = (eo) => {
     Swal.fire({
@@ -53,7 +53,7 @@ export default function Shop() {
       {/*  */}
   <Infoproduct title={" Product  "}/>
 
-
+{product &&  
   <div className="container">
   <div className="row mx-0 justify-content-center">
     {data.map((item) => (
@@ -141,7 +141,7 @@ export default function Shop() {
     ))}
   </div>
 </div>
-
+ }
     </>
   );
 }
