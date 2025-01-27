@@ -52,20 +52,19 @@ h1 {
   padding: 20px;
   font-size: 25px;
 }
-.nav-link{
+.nav-link {
   font-weight: 600 !important;
-
 }
 
 .active {
   color: black;
-   font-weight: bold;
+  font-weight: bold;
 }
 
 .mySwiper {
   width: 100% !important;
   height: 600px !important;
-  margin: 50px 0px;
+  margin: 50px 0;
 }
 .mySwiper img {
   width: 100%;
@@ -81,18 +80,12 @@ h1 {
 /* Detlse */
 
 .card-img-top {
-  margin-top: 30px;
   margin-left: auto !important;
   margin-right: auto !important;
-  width: 200px !important;
-  height: 200px !important;
+  width: 100% !important;
+  height: 250px !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
- 
-
-
 
 .d {
   color: white !important;
@@ -103,26 +96,22 @@ h1 {
 }
 
 .desc {
-  font-size: large;
+  font-size: 17px;
   width: 100%;
   height: 30px !important;
-  font-weight:500;
-  color: rgb(103, 103, 103);
+  font-weight: 500;
+  color: rgb(0, 0, 0);
 }
-.card-text{
-  font-size: large;
+.card-text {
+  font-size: 11px !important;
   width: 100%;
   height: 30px !important;
-  font-weight:500;
+  font-weight: 100;
   color: rgb(155, 155, 155);
 }
 .car {
   margin-top: 100px !important;
 }
-
- 
- 
- 
 
 .UP {
   position: fixed;
@@ -130,8 +119,10 @@ h1 {
   bottom: 10vh;
   border-radius: 50% !important;
   width: 40px;
-  height:40px;
-  background-color: #6d9eaa !important;
+  height: 40px;
+
+  background-color: gray !important;
+  color: #fff !important;
 }
 
 .Detailse {
@@ -142,24 +133,47 @@ h1 {
   align-items: center;
   min-height: 500px;
   margin: 30px;
-  margin-top: 15%;  
+  margin-top: 15%;
 }
- 
- 
-
 
 .oferimg {
   border-radius: 10px;
-  display: block;
-}
-.info-product{
-margin-top: 5%;
-margin-left: 2%;
-
   width: 100%;
-  height: 300px;
-  
+  height: auto;  
+  max-height: 300px;  
+}
 
+.info-product {
+  margin: 10% 0 5% 0;  
+ padding: 0 10px;
+  width: 90%;
+}
 
+.product-title {
+  font-size: 2rem;  
+  margin-top: 10px;
+}
 
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 1.5rem;  
+  }
+
+  .info-product {
+    margin-top: 20%;  
+  }
+
+  .oferimg {
+    height: 100px;  
+  width: 100%;
+
+  }
+}
+
+ 
+@media (min-width: 1024px) {
+  .product-title {
+    font-size: 3rem;  
+  }
+ 
 }

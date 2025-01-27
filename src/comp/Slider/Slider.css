@@ -3,6 +3,46 @@
 .slide-content {
     position: relative;
     width: 100%;
+    margin: 0 !important;
   }
    
-   
+   /* Custom button styling with Bootstrap compatibility */
+.custom-btn {
+  position: relative;
+  overflow: hidden;
+  font-size: 1.5rem; /* Adjust as needed */
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: transparent;
+  color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+}
+
+.custom-btn .hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #37FF8B;
+  content: attr(data-text);
+  -webkit-text-stroke: 1px #37FF8B;
+  width: 5%;
+  border-right: 6px solid #37FF8B;
+  overflow: hidden;
+  animation: hover-animation 2s linear infinite;
+}
+
+@keyframes hover-animation {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}

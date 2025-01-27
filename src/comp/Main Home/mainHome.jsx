@@ -45,6 +45,7 @@ export default function MainHome() {
     position: "relative",
     zIndex: 1,
     padding: "10px 0",
+    
   }}
 >
   {/* Overlay */}
@@ -61,7 +62,7 @@ export default function MainHome() {
     }}
   ></div> 
 
-  <div className="container text-center">
+  <div className="container text-center ">
     <div className="row justify-content-center">
       <div className="col-md-10">
         <div className="row">

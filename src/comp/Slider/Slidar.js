@@ -8,17 +8,16 @@ import "./Slider.css";
 export default function Slidar() {
   const slides = [
     {
-      image: "/logos/pro_3.jpg",
+      image: "/Slider/img (1).jpg",
       title: "Discover the latest trends in fashion",
      
     },
     {
-      image: "/logos/pro_2.jpg",
+      image: "/Slider/img (2).jpg",
       title: "Quality you can trust",
     },
     {
-      image:
-        "https://res.cloudinary.com/drlhjaofi/image/upload/v1713130063/2/1658329192737168ff6ad063452563108e1de4d132_thumbnail_900x_q7q07n.webp",
+      image: "/Slider/img (3).jpg",
       title: "Style that suits your personality",
     },
 
@@ -35,9 +34,17 @@ export default function Slidar() {
                 alt={`Fashion ${index + 1}`}
                 className=" "
               />
-             {/* <div className="position-absolute top-50 start-50 translate-middle text-center bg-white bg-opacity-75 p-3 rounded"> 
-            <p className="text-black mb-0">{slide.title}</p>  
-          </div> */}
+             <div className="position-absolute bottom-50 end-50 text-center "> 
+            <p className="text-white  font-bold fs-3">{slide.title}</p>  
+
+
+<button class="btn custom-btn" data-text="Awesome">
+  <span class="actual-text">&nbsp;Go now&nbsp;</span>
+  <span aria-hidden="true" class="hover-text flex">&nbsp;Shopping&nbsp;</span>
+</button>
+
+
+          </div>
             </div>
           </SwiperSlide>
         ))}

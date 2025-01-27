@@ -1,27 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import  "./Detailse.css";
+import data from "../../data.json";
+
 
 export default function Details() {
-  const { ID } = useParams();
-  const [products, setproducts] = useState();
+  const { ID } = useParams();  
+  const [product, setProduct] = useState(null);  
+
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${ID}`)
-      .then((res) => res.json())
-      .then((products) => {
-        setproducts(products);
-      });
-  }, [ID]);
+    const foundProduct = data.find((item) => item.id === parseInt(ID));
+    if (foundProduct) {
+      setProduct(foundProduct);  
+    }
+  }, [ID]);   
+
+  if (!product) {
+    return <div>Loading...</div>; 
+  }
 
   return (
     <>
- {products && (
+ {product && (
   <main>
-    <img src={products.image} alt="Product" />
+    <img src={product.image} alt="Product" />
     <div className="product-details">
-      <h2>{products.title}</h2>
-      <p className="description">{products.description}</p>
-      <p className="price">Price: ${products.price}</p>
+      <h2>{product.title}</h2>
+      <p className="description">{product.description}</p>
+      <p className="price">Price: ${product.price}</p>
     </div>
   </main>
 )}

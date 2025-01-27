@@ -147,3 +147,10 @@
     transition: all 0s;
   }
   
+
+  .Hover:hover {
+    background-color: aqua;
+    transition: all 0.5s;
+    transform: scale(.9); 
+  }
+  
