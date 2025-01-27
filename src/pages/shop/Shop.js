@@ -23,7 +23,7 @@ export default function Shop() {
       
         
       });
-  }, [setproduct]);
+  });
   // Alert
   const changevalue = (eo) => {
     Swal.fire({
@@ -108,7 +108,8 @@ export default function Shop() {
             ) : (
               <div className="d-flex justify-content-between align-items-center pt-2">
                 <div className="text-danger fw-bold">
-                  ${item.price}
+                ${item.price.toString().slice(0, 2)}
+
                   <i
                     style={{
                       color: hart[item.id] ? "red" : "blue",
@@ -122,17 +123,17 @@ export default function Shop() {
                     className="ms-2 fa-solid fa-heart"
                   ></i>
                 </div>
-
-                <button
-                  onClick={() => {
-                    dispatch(Add(item));
-                    changevalue();
-                  }}
-                  className="btn btn-primary fw-bold"
-                >
-                  <i className="fa-solid fa-cart-plus text-light"></i>
-                  Add Cart
-                </button>
+  
+                  <button
+                    onClick={() => {
+                      dispatch(Add(item));
+                      changevalue();
+                    }}
+                    className="btn btn-primary fw-bold"
+                  >
+                    <i className="fa-solid fa-cart-plus text-light"></i>
+                    Add Cart
+                  </button>
               </div>
             )}
           </div>
