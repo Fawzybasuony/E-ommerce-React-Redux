@@ -1,20 +1,22 @@
 /** @format */
 
-import React  from "react";
-import Slidar from "../../comp/Slider/Slidar";
-import MainHome from "../../comp/Main Home/mainHome";
-import Slider from "../../comp/Slidar Logo/Slider";
-import ButtomUp from "../../comp/up";
+import React from "react";
+import Slidar from "../../components/Slider/Slidar";
+import MainHome from "../../components/Main Home/mainHome";
+import Slider from "../../components/Slidar Logo/Slider";
+import ButtomUp from "../../components/up";
+import ProductLest from "../../components/productLest/productLest";
+import Photo_Info from "../../components/Main_Photo/Photo_Info";
 
 const Home = () => {
   return (
     <>
-    
-        <Slidar />
-        <MainHome />
-        <Slider />
-        <ButtomUp />
-     
+      <Slidar />
+      <MainHome />
+      <ProductLest />
+      <Photo_Info />
+      <Slider />
+      <ButtomUp />
     </>
   );
 };

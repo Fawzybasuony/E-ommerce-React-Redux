@@ -13,11 +13,11 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import NotFuond from "./comp/Not_fuond/NotFuond";
+import NotFuond from "./components/Not_fuond/NotFuond";
 import React, { Suspense } from "react";
-import Loading from "./comp/Loading/Loading";
+import Loading from "./components/Loading/Loading";
 import Abute from "./pages/About/Abute";
-import Details from "./comp/Details Card/Details";
+import Details from "./components/Details Card/Details";
 const Home = React.lazy(() => import("./pages/Home/home"));
 
 const router = createBrowserRouter(

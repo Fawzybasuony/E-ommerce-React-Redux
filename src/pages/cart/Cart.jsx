@@ -130,7 +130,7 @@ const Cart = () => {
               >
                 <Typography variant="body1">Subtotal</Typography>
 
-                <Typography variant="body1">${totle}</Typography>
+                <Typography variant="body1">${totle.toFixed(0)}</Typography>
               </Stack>
 
               <Divider />

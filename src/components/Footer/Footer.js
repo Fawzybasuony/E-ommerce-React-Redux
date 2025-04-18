@@ -212,7 +212,7 @@ export default function Footer() {
             <p className="footer-copyright-text">
               <Link className="footer-copyright-link" href="#" target="_self">
                 {" "}
-                ©2024. | Designed By: Fawzy Basuony. | All rights reserved.{" "}
+                ©2025. | Designed By: Fawzy Basuony. | All rights reserved.{" "}
               </Link>
             </p>
           </div>

@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
- 
+
 import "./contact.css";
 
 export default function Contact() {
   return (
     <>
-
       <div>
         <section className="page-add">
           <div className="container">
@@ -14,13 +13,10 @@ export default function Contact() {
               <div className="col-lg-4">
                 <div className="page-breadcrumb">
                   <h2>
-              Contact us<span>.</span>
-              
+                    Contact us<span>.</span>
                   </h2>
-          
                 </div>
               </div>
-               
             </div>
           </div>
         </section>
@@ -31,15 +27,35 @@ export default function Contact() {
                 <form action="#" className="contact-form">
                   <div className="row">
                     <div className="col-lg-6">
-                      <input type="text" placeholder="First Name" />
+                      <input
+                        className=" border-b border-info"
+                        type="text"
+                        placeholder="First Name"
+                      />
                     </div>
                     <div className="col-lg-6">
-                      <input type="text" placeholder="Last Name" />
+                      <input
+                        className=" border-b border-info"
+                        type="text"
+                        placeholder="Last Name"
+                      />
                     </div>
                     <div className="col-lg-12">
-                      <input type="email" placeholder="E-mail" />
-                      <input type="text" placeholder="Subject" />
-                      <textarea placeholder="Message" defaultValue={""} />
+                      <input
+                        className=" border-b border-info"
+                        type="email"
+                        placeholder="E-mail"
+                      />
+                      <input
+                        className=" border-b border-info"
+                        type="text"
+                        placeholder="Subject"
+                      />
+                      <textarea
+                        className=" border-b border-info"
+                        placeholder="Message"
+                        defaultValue={""}
+                      />
                     </div>
                     <div className="col-lg-12 text-right">
                       <button type="submit">Send message</button>
@@ -53,7 +69,7 @@ export default function Contact() {
                     <h5>Location</h5>
                     <ul>
                       <li>1525 Awesome Lane, </li>
-                      <li>Los Angeles, CA</li>
+                      <li>3 Tahrir Street",Giza, Egypt</li>
                     </ul>
                   </div>
                   <div className="cw-item">
@@ -88,7 +104,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
     </>
   );
 }

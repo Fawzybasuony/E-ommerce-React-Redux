@@ -1,21 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  
+    
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  color: black;
-  font-family: sans-serif;
-  text-decoration: none;
-  list-style: none;
-  letter-spacing: 1px;
-}
+  * {
+    font-family: "Special Gothic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    letter-spacing: 1px;
+  }
+ 
 /* nav bar */
 
 /* Color of the links BEFORE scroll */
@@ -53,23 +52,14 @@ h1 {
   font-size: 25px;
 }
 .nav-link {
-  font-weight: 600 !important;
+  color: rgb(74, 74, 74);
+  font-weight: bolder;
+  font-size: 17px;
 }
 
 .active {
   color: black;
-  font-weight: bold;
-}
-
-.mySwiper {
-  width: 100% !important;
-  height: 600px !important;
-  margin: 50px 0;
-}
-.mySwiper img {
-  width: 100%;
-  height: 600px !important;
-  cursor: grab;
+  font-size: 20px;
 }
 
 .card {
@@ -139,41 +129,38 @@ h1 {
 .oferimg {
   border-radius: 10px;
   width: 100%;
-  height: auto;  
-  max-height: 300px;  
+  height: auto;
+  max-height: 300px;
 }
 
 .info-product {
-  margin: 10% 0 5% 0;  
- padding: 0 10px;
+  margin: 10% 0 5% 0;
+  padding: 0 10px;
   width: 90%;
 }
 
 .product-title {
-  font-size: 2rem;  
+  font-size: 2rem;
   margin-top: 10px;
 }
 
 @media (max-width: 768px) {
   .product-title {
-    font-size: 1.5rem;  
+    font-size: 1.5rem;
   }
 
   .info-product {
-    margin-top: 20%;  
+    margin-top: 20%;
   }
 
   .oferimg {
-    height: 100px;  
-  width: 100%;
-
+    height: 100px;
+    width: 100%;
   }
 }
 
- 
 @media (min-width: 1024px) {
   .product-title {
-    font-size: 3rem;  
+    font-size: 3rem;
   }
- 
 }
