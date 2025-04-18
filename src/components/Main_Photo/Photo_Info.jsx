@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Photo_Info() {
+export default function PhotoInfo() {
     
 const counters = [
     { number: 10000, text: "Customers" },

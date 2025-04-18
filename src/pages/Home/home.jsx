@@ -6,7 +6,7 @@ import MainHome from "../../components/Main Home/mainHome";
 import Slider from "../../components/Slidar Logo/Slider";
 import ButtomUp from "../../components/up";
 import ProductLest from "../../components/productLest/productLest";
-import Photo_Info from "../../components/Main_Photo/Photo_Info";
+import PhotoInfo from "../../components/Main_Photo/Photo_Info";
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <Slidar />
       <MainHome />
       <ProductLest />
-      <Photo_Info />
+      <PhotoInfo />
       <Slider />
       <ButtomUp />
     </>
