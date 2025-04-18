@@ -6,7 +6,7 @@ import MainHome from "../../components/Main Home/mainHome";
 import Slider from "../../components/Slidar Logo/Slider";
 import ButtomUp from "../../components/up";
 import ProductLest from "../../components/productLest/productLest";
-import PhotoInfo from "../../components/Main_Photo/Photo_Info";
+import PhotoInfo from "../../components/Main_Photo/PhotoInfo";
 
 const Home = () => {
   return (
