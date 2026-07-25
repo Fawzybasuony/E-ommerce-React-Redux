@@ -1,0 +1,300 @@
+/* ==========================================================================
+   Header.css — "Atelier Market" navbar theme
+   Palette + type tokens, extracted out of the component so both live
+   independently and can be reused / retheme'd from one place.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap");
+
+:root {
+  /* --- Color tokens ------------------------------------------------- */
+  --sb-ink: #23261f;          /* near-black, warm charcoal-olive — primary text */
+  --sb-ink-soft: #565a4d;     /* secondary text / inactive links */
+  --sb-paper: #f6f2e8;        /* warm parchment — navbar surface */
+  --sb-paper-solid: #faf7ef;  /* solid paper for scrolled / mobile panel */
+  --sb-moss: #4a5d45;         /* muted botanical green — quiet accent */
+  --sb-clay: #b6572f;         /* clay / rust — the one loud accent color */
+  --sb-clay-dim: rgba(182, 87, 47, 0.12);
+  --sb-line: rgba(35, 38, 31, 0.12); /* hairline borders */
+  --sb-line-strong: rgba(35, 38, 31, 0.22);
+
+  /* --- Type tokens ---------------------------------------------------- */
+  --sb-font-display: "Fraunces", "Iowan Old Style", serif; /* logo / signature */
+  --sb-font-body: "Manrope", -apple-system, sans-serif;     /* nav links, UI */
+  --sb-font-mono: "IBM Plex Mono", ui-monospace, monospace; /* cart count, tags */
+
+  /* --- Layout tokens ---------------------------------------------------- */
+  --sb-radius: 3px;
+  --sb-radius-pill: 999px;
+}
+
+/* --- Wrapper / positioning ------------------------------------------- */
+
+.sb-header-wrapper,
+.sb-header-wrapper * {
+  box-sizing: border-box; /* keeps padding INSIDE the declared width — */
+}                          /* without this, the navbar's box math breaks */
+                           /* on narrow screens and it can collapse into */
+                           /* a squashed / circular blob. */
+
+.sb-header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+  transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sb-header-wrapper.is-scrolled {
+  padding-top: 14px;
+}
+
+/* --- Navbar shell ------------------------------------------------------ */
+
+.sb-navbar {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0px;
+  background: rgba(246, 242, 232, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--sb-line);
+  box-shadow: none;
+  padding: 16px 40px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--sb-font-body);
+}
+
+.sb-navbar.is-scrolled {
+  width: 92%;
+  max-width: 1180px;
+  border-radius: var(--sb-radius-pill);
+  background: var(--sb-paper-solid);
+  border: 1px solid var(--sb-line-strong);
+  box-shadow: 0 18px 40px -12px rgba(35, 38, 31, 0.16),
+    0 4px 10px -4px rgba(35, 38, 31, 0.06);
+  padding: 10px 26px;
+}
+
+/* On phones, cut the padding and use a softer, fixed corner radius
+   instead of a 999px pill — a pill on a short, narrow box is exactly
+   what reads as "ball-shaped". */
+@media (max-width: 576px) {
+  .sb-navbar {
+    padding: 12px 16px;
+  }
+
+  .sb-navbar.is-scrolled {
+    width: 94%;
+    padding: 8px 14px;
+    border-radius: 45px;
+  }
+}
+
+.sb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-width: 0;
+}
+
+/* --- Logo / signature mark --------------------------------------------- */
+
+.sb-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.sb-logo-text {
+  white-space: nowrap;
+}
+
+.sb-logo-mark {
+  color: var(--sb-clay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sb-logo-text {
+  font-family: var(--sb-font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: -0.2px;
+  color: var(--sb-ink);
+}
+
+.sb-logo-text em {
+  font-style: normal;
+  color: var(--sb-clay);
+}
+
+/* --- Desktop nav links -------------------------------------------------- */
+
+.sb-links {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .sb-links {
+    display: flex;
+  }
+}
+
+.sb-link-item {
+  position: relative;
+  list-style: none;
+}
+
+.sb-link {
+  text-decoration: none;
+  font-family: var(--sb-font-body);
+  font-weight: 600;
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  display: inline-block;
+  color: var(--sb-ink-soft);
+  border-radius: var(--sb-radius);
+  transition: color 0.2s ease;
+}
+
+.sb-link:hover {
+  color: var(--sb-ink);
+}
+
+.sb-link.is-active {
+  color: var(--sb-ink);
+}
+
+.sb-active-indicator {
+  position: absolute;
+  bottom: 2px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--sb-clay);
+  border-radius: 2px;
+}
+
+/* --- Action icons --------------------------------------------------- */
+
+.sb-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.sb-icon-btn {
+  color: var(--sb-ink-soft);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sb-icon-btn:hover {
+  color: var(--sb-clay);
+  background: var(--sb-clay-dim);
+}
+
+.sb-social {
+  display: none;
+  align-items: center;
+  gap: 2px;
+  margin-left: 6px;
+}
+
+@media (min-width: 768px) {
+  .sb-social {
+    display: flex;
+  }
+}
+
+.sb-cart-badge .MuiBadge-badge {
+  background: var(--sb-clay);
+  color: var(--sb-paper);
+  font-family: var(--sb-font-mono);
+  font-weight: 500;
+  font-size: 0.66rem;
+  box-shadow: 0 3px 8px rgba(182, 87, 47, 0.35);
+}
+
+.sb-mobile-toggle {
+  display: block;
+  margin-left: 4px;
+}
+
+@media (min-width: 992px) {
+  .sb-mobile-toggle {
+    display: none;
+  }
+}
+
+/* --- Mobile menu panel ------------------------------------------------- */
+
+.sb-mobile-panel {
+  overflow: hidden;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--sb-line);
+}
+
+@media (min-width: 992px) {
+  .sb-mobile-panel {
+    display: none;
+  }
+}
+
+.sb-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 4px 6px;
+}
+
+.sb-mobile-link {
+  text-decoration: none;
+  font-family: var(--sb-font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 8px;
+  border-radius: var(--sb-radius);
+  color: var(--sb-ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sb-mobile-link.is-active {
+  color: var(--sb-clay);
+}
+
+.sb-mobile-link.is-active::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sb-clay);
+  display: inline-block;
+}
