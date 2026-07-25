@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
-import "./Slider.css";
+import "./Hero.css";
 
 const slides = [
   {
@@ -43,7 +43,7 @@ const ArrowIcon = () => (
   </svg>
 );
 
-export default function Slidar() {
+export default function Hero() {
   return (
     <div className="sb-hero ">
       <Swiper
