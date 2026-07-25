@@ -1,0 +1,120 @@
+/* ==========================================================================
+   photoInfo.css — "By the numbers" stats band, Atelier Market theme
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap");
+
+:root {
+  --sb-ink: #23261f;
+  --sb-ink-deep: #181a14;
+  --sb-paper: #f6f2e8;
+  --sb-clay: #b6572f;
+  --sb-clay-light: #e0a181;
+  --sb-font-display: "Fraunces", "Iowan Old Style", serif;
+  --sb-font-body: "Manrope", -apple-system, sans-serif;
+  --sb-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+#section-counter {
+  position: relative;
+  background: linear-gradient(155deg, var(--sb-ink-deep) 0%, var(--sb-ink) 100%);
+  overflow: hidden;
+  padding: 76px 0;
+  font-family: var(--sb-font-body);
+}
+
+.sb-stats-glow {
+  position: absolute;
+  top: -30%;
+  right: -8%;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(182, 87, 47, 0.28) 0%, rgba(182, 87, 47, 0) 70%);
+  pointer-events: none;
+}
+
+.sb-stats-head {
+  margin-bottom: 48px;
+}
+
+.sb-stats-eyebrow {
+  font-family: var(--sb-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sb-clay-light);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.sb-stats-heading {
+  font-family: var(--sb-font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  color: var(--sb-paper);
+  margin: 0;
+}
+
+/* --- Stat items ------------------------------------------------- */
+
+.counter-wrap {
+  position: relative;
+  padding: 18px 12px;
+}
+
+.counter-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 56%;
+  background: rgba(246, 242, 232, 0.14);
+}
+
+.counter-wrap:first-child::before {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .counter-wrap::before {
+    display: none;
+  }
+  .counter-wrap:not(:first-child) {
+    border-top: 1px solid rgba(246, 242, 232, 0.14);
+  }
+}
+
+.block-18 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sb-stat-icon {
+  color: var(--sb-clay-light);
+  margin-bottom: 14px;
+}
+
+.sb-stat-number {
+  display: block;
+  font-family: var(--sb-font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(2.1rem, 3.6vw, 2.9rem);
+  color: var(--sb-paper);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.counter-wrap .text span {
+  display: block;
+  font-family: var(--sb-font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(246, 242, 232, 0.65);
+}
