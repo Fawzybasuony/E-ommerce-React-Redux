@@ -20,7 +20,7 @@
 
   --sb-radius: 10px;
   --sb-gutter: clamp(1.15rem, 4vw, 4rem);
-  --sb-section-y: clamp(2.25rem, 6vw, 6.5rem);
+  --sb-section-y: clamp(2.25rem, 5vw, 5rem);
   --sb-tap: 46px;
 }
 
@@ -43,7 +43,8 @@
 
 .sb-cart .sb-shop-section {
   inline-size: 100%;
-  padding-block: var(--sb-section-y);
+  /* padding-block: var(--sb-section-y); */
+  padding: 20px !important;
 }
 
 .sb-cart .sb-shop-container {
@@ -57,7 +58,9 @@
    MASTHEAD
    ================================================================== */
 .sb-cart-head {
-  padding-block-end: clamp(1.25rem, 3vw, 2.25rem);
+ 
+  text-align: center;
+  margin-top: 65px;
 }
 
 .sb-cart .sb-features-eyebrow {
