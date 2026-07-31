@@ -18,7 +18,8 @@ import React, { Suspense } from "react";
 import Loading from "./components/Loading/Loading";
  
 import Details from "./components/Details Card/Details";
-import AbuteUS from "./pages/About/Abute";
+ 
+import AboutUs from "./pages/About/AboutUs";
 const Home = React.lazy(() => import("./pages/Home/home"));
 
 const router = createBrowserRouter(
@@ -34,7 +35,7 @@ const router = createBrowserRouter(
       />
       <Route path="/Cart" element={<Cart />} />
       <Route path="/Contact" element={<Contact />} />
-      <Route path="/about" element={<AbuteUS />} />
+      <Route path="/about" element={<AboutUs />} />
       <Route path="/Shop" element={<Shop />} />
 
       <Route path="/Details/:ID" element={<Details />} />
