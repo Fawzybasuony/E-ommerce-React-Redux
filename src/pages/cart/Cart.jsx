@@ -12,6 +12,7 @@ import {
   deecreasQuontity,
 } from "../../Radox/mydataSlice.js";
 import "./Cart.css";
+import SEO from "../../helpers/SEO.jsx";
 
 /* ------------------------------------------------------------------ */
 /* config — change these two lines to match your routes / policy       */
@@ -112,6 +113,12 @@ const Cart = () => {
   /* bag with items                                                    */
   /* ---------------------------------------------------------------- */
   return (
+    <>
+      <SEO 
+        title="Shopping Cart" 
+        description="Review your selected items and proceed to secure checkout."
+        noindex={true}
+      />
     <div className="sb-cart">
       {/* masthead */}
       <section className="sb-shop-section sb-cart-head">
@@ -271,6 +278,7 @@ const Cart = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

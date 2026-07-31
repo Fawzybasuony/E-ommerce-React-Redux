@@ -10,6 +10,7 @@ import {
   LuUsers 
 } from "react-icons/lu";
 import "./AboutUs.css";
+import SEO from "../../helpers/SEO";
 
 const SHOP_ROUTE = "/Shop";
 const CONTACT_ROUTE = "/Contact";
@@ -94,6 +95,11 @@ export default function AboutUs() {
   const navigate = useNavigate();
 
   return (
+    <>
+    <SEO 
+        title="About Us" 
+        description="A decade of small runs and honest craft. Learn about our materials and philosophy."
+      />
     <div className="au-wrapper">
       {/* Background Subtle Gradient Glows */}
       <div className="au-glow au-glow-1" />
@@ -268,6 +274,6 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-    </div>
+    </div></>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "./contact.css";
+import SEO from "../../helpers/SEO";
 
 /* ------------------------------------------------------------------ */
 /* details — the only block you need to edit                           */
@@ -76,6 +77,11 @@ export default function Contact() {
   };
 
   return (
+<> 
+    <SEO 
+        title="Contact Us" 
+        description="Get in touch with our team for questions about orders, repairs, or custom enquiries. We reply within one business day."
+      />
     <div className="sb-contact-page">
       {/* ------------------------------------------------------------ */}
       {/* masthead                                                      */}
@@ -271,6 +277,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </div>
+    </div></>
   );
 }

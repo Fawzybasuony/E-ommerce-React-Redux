@@ -7,6 +7,7 @@ import Aos from "aos";
 import { Add } from "../../Radox/mydataSlice";
 import data from "../../data.json";
 import "./shoop.css";
+import SEO from "../../helpers/SEO";
 
 /* ------------------------------------------------------------------ */
 /* helpers                                                             */
@@ -133,6 +134,11 @@ export default function Shop() {
   };
 
   return (
+    <>
+      <SEO 
+        title="Shop Catalogue" 
+        description="Browse our active catalogue of small-batch products, full-grain leather goods, and merino wool items."
+      />
     <div className="sb-shop">
       {/* ------------------------------------------------------------ */}
       {/* masthead                                                      */}
@@ -424,5 +430,6 @@ export default function Shop() {
         </div>
       </section>
     </div>
+    </>
   );
 }
