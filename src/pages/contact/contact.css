@@ -62,8 +62,17 @@
 /* ==================================================================
    MASTHEAD
    ================================================================== */
+ 
 .sb-contact-head {
   padding-block-end: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+ 
+.sb-contact-head .sb-shop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .sb-contact-title {
@@ -72,9 +81,10 @@
   font-size: clamp(2.1rem, 7vw, 5.25rem);
   line-height: 1;
   letter-spacing: -0.02em;
-  margin: 0;
+  margin: 0 auto;            
   max-inline-size: 16ch;
   text-wrap: balance;
+  text-align: center;         
 }
 
 .sb-contact-title em {
@@ -88,7 +98,8 @@
   line-height: 1.65;
   color: var(--sb-ink-soft);
   max-inline-size: 56ch;
-  margin: clamp(1rem, 2.5vw, 1.75rem) 0 0;
+  margin: clamp(1rem, 2.5vw, 1.75rem) auto 0; 
+  text-align: center;      
 }
 
 /* ==================================================================
